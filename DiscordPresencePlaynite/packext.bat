@@ -1,0 +1,1 @@
+Toolbox.exe pack D:\Playnite\Extensions\DiscordPresencePlaynite %CD%

@@ -21,5 +21,10 @@ namespace DiscordPresencePlaynite
         {
             InitializeComponent();
         }
+
+        public void SetAppIDBoxText(string text)
+        {
+            AppIDBox.Text = text;
+        }
     }
 }

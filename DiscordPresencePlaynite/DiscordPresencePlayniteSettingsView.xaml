@@ -6,9 +6,12 @@
              mc:Ignorable="d"
              d:DesignHeight="400" d:DesignWidth="600">
     <StackPanel>
-        <TextBlock Text="Description for Option1:"/>
-        <TextBox Text="{Binding Option1}"/>
-        <TextBlock Text="Description for Option2:"/>
-        <CheckBox IsChecked="{Binding Option2}"/>
+        <TextBlock Text="Discord Application ID:"/>
+        <TextBox Name="AppIDBox" Text="{Binding Option1}"/>
+        <TextBlock>To set your own, go to  
+            <Hyperlink>
+            https://discordapp.com/developers/applications
+            </Hyperlink>
+            and create an application.</TextBlock>
     </StackPanel>
 </UserControl>

@@ -51,6 +51,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CloneObject.cs" />
     <Compile Include="DiscordPresencePlaynite.cs" />
     <Compile Include="DiscordPresencePlayniteSettings.cs" />
     <Compile Include="DiscordPresencePlayniteSettingsView.xaml.cs">

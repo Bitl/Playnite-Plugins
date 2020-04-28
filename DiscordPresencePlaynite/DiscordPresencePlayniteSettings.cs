@@ -11,15 +11,16 @@ namespace DiscordPresencePlaynite
     public class DiscordPresencePlayniteSettings : ISettings
     {
         private readonly DiscordPresencePlaynite plugin;
+        private DiscordPresencePlayniteSettings editingClone;
 
-        public string Option1 { get; set; } = string.Empty;
-
-        public bool Option2 { get; set; } = false;
+        public string AppID { get; set; } = "704803731211812885";
 
         // Playnite serializes settings object to a JSON object and saves it as text file.
         // If you want to exclude some property from being saved then use `JsonIgnore` ignore attribute.
+        /*
         [JsonIgnore]
         public bool OptionThatWontBeSaved { get; set; } = false;
+        */
 
         // Parameterless constructor must exist if you want to use LoadPluginSettings method.
         public DiscordPresencePlayniteSettings()
@@ -35,22 +36,26 @@ namespace DiscordPresencePlaynite
             var savedSettings = plugin.LoadPluginSettings<DiscordPresencePlayniteSettings>();
 
             // LoadPluginSettings returns null if not saved data is available.
-            if (savedSettings != null)
-            {
-                Option1 = savedSettings.Option1;
-                Option2 = savedSettings.Option2;
-            }
+            if (savedSettings == null) return;
+            AppID = savedSettings.AppID;
         }
 
         public void BeginEdit()
         {
             // Code executed when settings view is opened and user starts editing values.
+            editingClone = this.GetClone();
         }
 
         public void CancelEdit()
         {
             // Code executed when user decides to cancel any changes made since BeginEdit was called.
             // This method should revert any changes made to Option1 and Option2.
+            LoadValues(editingClone);
+        }
+
+        public void LoadValues(DiscordPresencePlayniteSettings source)
+        {
+            source.CopyProperties(this, false, null, true);
         }
 
         public void EndEdit()
