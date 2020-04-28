@@ -7,8 +7,8 @@
     <ProjectGuid>{4FDF1E89-5BC3-4C72-8FDA-0D580E7A5D5F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Discord-RichPresence</RootNamespace>
-    <AssemblyName>Discord-RichPresence</AssemblyName>
+    <RootNamespace>DiscordPresencePlaynite</RootNamespace>
+    <AssemblyName>DiscordPresencePlaynite</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,7 +35,7 @@
       <HintPath>packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Playnite.SDK, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PlayniteSDK.5.2.0\lib\net462\Playnite.SDK.dll</HintPath>
+      <HintPath>packages\PlayniteSDK.5.2.0\lib\net462\Playnite.SDK.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -51,11 +51,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Discord-RichPresence.cs" />
-    <Compile Include="Discord-RichPresenceSettings.cs" />
-    <Compile Include="Discord-RichPresenceSettingsView.xaml.cs">
-      <DependentUpon>Discord-RichPresenceSettingsView.xaml</DependentUpon>
+    <Compile Include="DiscordPresencePlaynite.cs" />
+    <Compile Include="DiscordPresencePlayniteSettings.cs" />
+    <Compile Include="DiscordPresencePlayniteSettingsView.xaml.cs">
+      <DependentUpon>DiscordPresencePlayniteSettingsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DiscordRpc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,7 +66,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Discord-RichPresenceSettingsView.xaml">
+    <Page Include="DiscordPresencePlayniteSettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

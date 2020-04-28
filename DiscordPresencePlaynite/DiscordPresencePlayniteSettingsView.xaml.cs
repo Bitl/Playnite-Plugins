@@ -13,11 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Discord-RichPresence
+namespace DiscordPresencePlaynite
 {
-    public partial class Discord-RichPresenceSettingsView : UserControl
+    public partial class DiscordPresencePlayniteSettingsView : UserControl
     {
-        public Discord-RichPresenceSettingsView()
+        public DiscordPresencePlayniteSettingsView()
         {
             InitializeComponent();
         }

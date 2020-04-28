@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Discord-RichPresence
+namespace DiscordPresencePlaynite
 {
-    public class Discord-RichPresenceSettings : ISettings
+    public class DiscordPresencePlayniteSettings : ISettings
     {
-        private readonly Discord-RichPresence plugin;
+        private readonly DiscordPresencePlaynite plugin;
 
         public string Option1 { get; set; } = string.Empty;
 
@@ -22,17 +22,17 @@ namespace Discord-RichPresence
         public bool OptionThatWontBeSaved { get; set; } = false;
 
         // Parameterless constructor must exist if you want to use LoadPluginSettings method.
-        public Discord-RichPresenceSettings()
+        public DiscordPresencePlayniteSettings()
         {
         }
 
-        public Discord-RichPresenceSettings(Discord-RichPresence plugin)
+        public DiscordPresencePlayniteSettings(DiscordPresencePlaynite plugin)
         {
             // Injecting your plugin instance is required for Save/Load method because Playnite saves data to a location based on what plugin requested the operation.
             this.plugin = plugin;
 
             // Load saved settings.
-            var savedSettings = plugin.LoadPluginSettings<Discord-RichPresenceSettings>();
+            var savedSettings = plugin.LoadPluginSettings<DiscordPresencePlayniteSettings>();
 
             // LoadPluginSettings returns null if not saved data is available.
             if (savedSettings != null)

@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace Discord-RichPresence
+namespace DiscordPresencePlaynite
 {
-    public class Discord-RichPresence : Plugin
+    public class DiscordPresencePlaynite : Plugin
     {
         private static readonly ILogger logger = LogManager.GetLogger();
 
-        private Discord-RichPresenceSettings settings { get; set; }
+        private DiscordPresencePlayniteSettings settings { get; set; }
 
-        public override Guid Id { get; } = Guid.Parse("d5eebd91-604b-47aa-9ea1-4576840a775a");
+        public override Guid Id { get; } = Guid.Parse("02330dd0-ec45-4da9-a626-4a625aa15cc8");
 
-        public Discord-RichPresence(IPlayniteAPI api) : base(api)
+        public DiscordPresencePlaynite(IPlayniteAPI api) : base(api)
         {
-            settings = new Discord-RichPresenceSettings(this);
+            settings = new DiscordPresencePlayniteSettings(this);
         }
 
         public override IEnumerable<ExtensionFunction> GetFunctions()
@@ -84,7 +84,7 @@ namespace Discord-RichPresence
 
         public override UserControl GetSettingsView(bool firstRunSettings)
         {
-            return new Discord-RichPresenceSettingsView();
+            return new DiscordPresencePlayniteSettingsView();
         }
     }
 }
